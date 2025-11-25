@@ -1,0 +1,36 @@
+{
+  "name": "freelancex-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts untuk platform freelance FreeLanceX di Mantle Network",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:gas": "REPORT_GAS=true hardhat test",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network mantleSepolia",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network mantleMainnet",
+    "integration:sepolia": "hardhat run scripts/test-integration.js --network mantleSepolia",
+    "verify": "hardhat verify --network mantleSepolia",
+    "clean": "hardhat clean",
+    "size": "hardhat size-contracts",
+    "node": "hardhat node"
+  },
+  "keywords": [
+    "smart-contract",
+    "escrow",
+    "freelance",
+    "mantle",
+    "blockchain",
+    "web3"
+  ],
+  "author": "FreeLanceX Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "hardhat": "^2.19.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.6",
+    "dotenv": "^16.3.1"
+  }
+}
