@@ -755,6 +755,7 @@ contract FreelanceEscrow is Ownable, ReentrancyGuard, Pausable {
             (escrow.status == EscrowStatus.FUNDED || escrow.status == EscrowStatus.IN_PROGRESS) &&
             block.number > escrow.deadline + DISPUTE_GRACE_PERIOD &&
             escrow.totalAmount > escrow.releasedAmount
+            
         );
     }
 }
